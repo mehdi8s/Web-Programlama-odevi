@@ -1,0 +1,57 @@
+#rw1{
+  background-color: rgb(107, 107, 107);
+  }
+  #rw2{
+  background-color: rgb(190, 190, 190);
+  }
+  #rw3{
+    background-color: rgb(248, 248, 248);
+  }
+  .dv1{
+    margin:20px;
+  }
+  #login{
+   background-color: #0f0635f6;
+   background-repeat: no-repeat ;
+   background-image: url("../../Resimler/BGmap.png");
+   background-position: center;
+  }
+  #iletisim{
+    background-color: #3a0e1e;
+    background-repeat: no-repeat ;
+    background-image: url("../../Resimler/BGmap.png");
+    background-position: center;
+   }
+   #hakkımda{
+    background-color: #3a0e1e;
+    background-repeat: no-repeat ;
+    background-image: url("../../Resimler/BGDesk.jpeg");
+    background-position: center;
+   }
+   #cv{
+    background-color: #3a0e1e;
+    background-repeat: no-repeat ;
+    background-image: url("../../Resimler/BGDesk.jpeg");
+    background-position: center;
+   }
+   #ilgialanlarım{
+    background-color: #292828;
+   }
+  #txa1{
+  height: 70%;
+}
+  #message{
+  height: 100%;
+}
+#text-white{
+  color:white;
+}
+#iconLinkedin{
+  font-size: 30px; color:rgb(16, 16, 167);
+}
+#iconInstagram{
+  font-size: 30px; color:rgb(151, 13, 13);
+}
+
+
+

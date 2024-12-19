@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Melih\\source\\repos\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj": {}
+    "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Melih\\source\\repos\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj": {
+    "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Melih\\source\\repos\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj",
+        "projectUniqueName": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj",
         "projectName": "AI_Kesim",
-        "projectPath": "C:\\Users\\Melih\\source\\repos\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj",
+        "projectPath": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\AI_Kesim.csproj",
         "packagesPath": "C:\\Users\\Melih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Melih\\source\\repos\\AI_Kesim\\AI_Kesim\\obj\\",
+        "outputPath": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,9 +66,17 @@
               "target": "Package",
               "version": "[8.0.11, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [

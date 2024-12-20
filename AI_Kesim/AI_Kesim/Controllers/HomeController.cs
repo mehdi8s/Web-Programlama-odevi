@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using AI_Kesim.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AI_Kesim.Controllers
@@ -17,7 +18,7 @@ namespace AI_Kesim.Controllers
         {
             return View();
         }
-
+        //[Authorize]
         public IActionResult Privacy()
         {
             return View();

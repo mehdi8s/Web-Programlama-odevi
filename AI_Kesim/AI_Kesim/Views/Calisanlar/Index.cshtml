@@ -15,7 +15,7 @@
         <tr>
             <th>@Html.DisplayNameFor(model => model.First().Isim)</th>
             <th>@Html.DisplayNameFor(model => model.First().Soyisim)</th>
-            <th>@Html.DisplayNameFor(model => model.First().UzmanlikAlani)</th>
+            <th>Uzmanlık Alanları</th>
             <th>@Html.DisplayNameFor(model => model.First().Maas)</th>
             <th>Çalışma Saatleri</th>
             <th>İşlemler</th>
@@ -27,7 +27,14 @@
             <tr>
                 <td>@item.Isim</td>
                 <td>@item.Soyisim</td>
-                <td>@item.UzmanlikAlani</td>
+                <td>
+                    <ul>
+                        @foreach (var uzmanlik in item.CalisanUzmanliklari)
+                        {
+                            <li>@uzmanlik.Uzmanlik.Ad</li>
+                        }
+                    </ul>
+                </td>
                 <td>@item.Maas</td>
                 <td>
                     <ul>
@@ -47,3 +54,11 @@
         }
     </tbody>
 </table>
+
+<form action="@Url.Action("Index", "Uzmanliks")" method="get">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">
+            Uzmanlık Alanlarını Görüntüle
+        </button>
+    </div>
+</form>

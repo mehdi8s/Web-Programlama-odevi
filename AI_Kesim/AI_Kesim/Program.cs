@@ -20,7 +20,7 @@ builder.Services.AddIdentity<UserDetails, IdentityRole>(options =>
     options.Password.RequireLowercase = false; // Küçük harf gereksinimi
 }).AddEntityFrameworkStores<ApplicationDbContext>()
    .AddDefaultUI()
-  .AddDefaultTokenProviders();
+   .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
 
@@ -46,4 +46,32 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
+// RoleManager ve UserManager ile uygulama ba??nda rol olu?turulmas?n? sa?l?yoruz
+CreateRolesIfNotExist(app).Wait();
+
 app.Run();
+
+// Uygulama ba?lat?ld???nda rolleri olu?turacak metod
+async Task CreateRolesIfNotExist(IHost app)
+{
+    var scope = app.Services.CreateScope();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserDetails>>();
+
+    // E?er "User" rolü zaten varsa, i?lem yapma
+    var roleExist = await roleManager.RoleExistsAsync("User");
+    if (!roleExist)
+    {
+        // "User" rolü olu?turuluyor
+        var role = new IdentityRole("User");
+        await roleManager.CreateAsync(role);
+    }
+
+    // E?er "Admin" rolü yoksa olu?turulabilir
+    var adminRoleExist = await roleManager.RoleExistsAsync("Admin");
+    if (!adminRoleExist)
+    {
+        var adminRole = new IdentityRole("Admin");
+        await roleManager.CreateAsync(adminRole);
+    }
+}

@@ -10,8 +10,26 @@ namespace AI_Kesim.Data
             : base(options)
         {
         }
-        public DbSet<AI_Kesim.Models.Calisan> Calisan { get; set; } = default!;
 
+        public DbSet<Calisan> Calisan { get; set; }
+        public DbSet<CalismaSaati> CalismaSaatleri { get; set; }
+        public DbSet<Uzmanlik> Uzmanliklar { get; set; }
+        public DbSet<CalisanUzmanlik> CalisanUzmanliklari { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Çalışan-Uzmanlık ilişkisi için ara tablo konfigürasyonu
+            modelBuilder.Entity<CalisanUzmanlik>()
+                .HasOne(cu => cu.Calisan)
+                .WithMany(c => c.CalisanUzmanliklari)
+                .HasForeignKey(cu => cu.CalisanId);
+
+            modelBuilder.Entity<CalisanUzmanlik>()
+                .HasOne(cu => cu.Uzmanlik)
+                .WithMany(u => u.CalisanUzmanliklari)
+                .HasForeignKey(cu => cu.UzmanlikId);
+        }
     }
 }
-

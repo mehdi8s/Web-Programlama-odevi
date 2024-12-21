@@ -3,17 +3,18 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+<h1>Uzmanlık Alanları</h1>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Yeni uzmanlık alanı oluştur</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                Ücret
             </th>
             <th></th>
         </tr>
@@ -24,12 +25,22 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Ad)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ucret)
+                </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<form action="@Url.Action("Index", "Calisanlar")" method="get">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">
+            Admin Paneline Geri Dön
+        </button>
+    </div>
+</form>

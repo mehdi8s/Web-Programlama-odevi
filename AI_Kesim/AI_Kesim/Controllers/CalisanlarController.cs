@@ -20,15 +20,18 @@ namespace AI_Kesim.Controllers
         }
 
         // GET: Calisans
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var calisanlar = await _context.Calisan
-                .Include(c => c.CalismaSaatleri)
-                .ToListAsync();
+            var calisanlar = _context.Calisan
+                .Include(c => c.CalisanUzmanliklari) // Çalışan ve ilişkili uzmanlıkları dahil et
+                .ThenInclude(cu => cu.Uzmanlik)     // Ara tablodan Uzmanlıkları dahil et
+                .ToList();
+
             return View(calisanlar);
         }
 
-        // GET: Calisans/Details/5
+
+        // GET: Calisanlar/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,19 +39,28 @@ namespace AI_Kesim.Controllers
                 return NotFound();
             }
 
-            var calisanlar = await _context.Calisan
+            var calisan = await _context.Calisan
+                .Include(c => c.CalisanUzmanliklari)
+                    .ThenInclude(cu => cu.Uzmanlik)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (calisanlar == null)
+
+            if (calisan == null)
             {
                 return NotFound();
             }
 
-            return View(calisanlar);
+            return View(calisan);
         }
 
         // GET: Calisans/Create
         public IActionResult Create()
         {
+            // Tüm uzmanlıkları getir ve ViewData ile View'e gönder
+            var uzmanliklar = _context.Uzmanliklar
+                .Select(u => new { u.Id, u.Ad })
+                .ToList();
+
+            ViewData["Uzmanliklar"] = uzmanliklar; // List olarak gönderiyoruz
             return View();
         }
 
@@ -57,14 +69,35 @@ namespace AI_Kesim.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Isim,Soyisim,UzmanlikAlani,Maas")] Calisan calisan)
+        public IActionResult Create(Calisan calisan, int[] UzmanlikIds)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(calisan);
-                await _context.SaveChangesAsync();
+                // Çalışanı kaydet
+                _context.Calisan.Add(calisan);
+                _context.SaveChanges();
+
+                // Uzmanlıkları ilişkilendir ve kaydet
+                foreach (var uzmanlikId in UzmanlikIds)
+                {
+                    var calisanUzmanlik = new CalisanUzmanlik
+                    {
+                        CalisanId = calisan.Id,
+                        UzmanlikId = uzmanlikId
+                    };
+                    _context.CalisanUzmanliklari.Add(calisanUzmanlik);
+                }
+
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
+
+            // Eğer model geçersizse uzmanlık listesini tekrar doldur
+            var uzmanliklar = _context.Uzmanliklar
+                .Select(u => new { u.Id, u.Ad })
+                .ToList();
+
+            ViewData["Uzmanliklar"] = uzmanliklar;
             return View(calisan);
         }
 
@@ -76,50 +109,94 @@ namespace AI_Kesim.Controllers
                 return NotFound();
             }
 
-            var calisan = await _context.Calisan.FindAsync(id);
+            var calisan = await _context.Calisan
+                .Include(c => c.CalisanUzmanliklari)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
             if (calisan == null)
             {
                 return NotFound();
             }
+
+            // Tüm uzmanlıkları getir
+            var uzmanliklar = await _context.Uzmanliklar
+                .Select(u => new { u.Id, u.Ad })
+                .ToListAsync();
+
+            // Çalışanın mevcut uzmanlık ID'lerini al
+            var secilenUzmanliklar = calisan.CalisanUzmanliklari
+                .Select(cu => cu.UzmanlikId)
+                .ToList();
+
+            ViewData["Uzmanliklar"] = uzmanliklar;
+            ViewData["SecilenUzmanliklar"] = secilenUzmanliklar;
+
             return View(calisan);
         }
 
-        // POST: Calisans/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Isim,Soyisim,UzmanlikAlani,Maas")] Calisan calisan)
+// POST: Calisans/Edit/5
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Edit(int id, Calisan calisan, int[] UzmanlikIds)
+{
+    if (id != calisan.Id)
+    {
+        return NotFound();
+    }
+
+    if (ModelState.IsValid)
+    {
+        try
         {
-            if (id != calisan.Id)
+            // Mevcut çalışanı context'e bağla
+            _context.Entry(calisan).State = EntityState.Modified;
+
+            // Mevcut uzmanlık ilişkilerini sil
+            var mevcutUzmanliklar = await _context.CalisanUzmanliklari
+                .Where(cu => cu.CalisanId == calisan.Id)
+                .ToListAsync();
+            _context.CalisanUzmanliklari.RemoveRange(mevcutUzmanliklar);
+
+            // Yeni uzmanlık ilişkilerini ekle
+            if (UzmanlikIds != null)
+            {
+                foreach (var uzmanlikId in UzmanlikIds)
+                {
+                    var calisanUzmanlik = new CalisanUzmanlik
+                    {
+                        CalisanId = calisan.Id,
+                        UzmanlikId = uzmanlikId
+                    };
+                    _context.CalisanUzmanliklari.Add(calisanUzmanlik);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!CalisanExists(calisan.Id))
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                try
-                {
-                    _context.Update(calisan);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CalisanExists(calisan.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                throw;
             }
-            return View(calisan);
         }
+    }
 
-        // GET: Calisans/Delete/5
+    // Hata durumunda uzmanlıkları tekrar yükle
+    var uzmanliklar = await _context.Uzmanliklar
+        .Select(u => new { u.Id, u.Ad })
+        .ToListAsync();
+    ViewData["Uzmanliklar"] = uzmanliklar;
+    
+    return View(calisan);
+}
+
+        // GET: Calisanlar/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -127,14 +204,17 @@ namespace AI_Kesim.Controllers
                 return NotFound();
             }
 
-            var calisanlar = await _context.Calisan
+            var calisan = await _context.Calisan
+                .Include(c => c.CalisanUzmanliklari)
+                    .ThenInclude(cu => cu.Uzmanlik)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (calisanlar == null)
+
+            if (calisan == null)
             {
                 return NotFound();
             }
 
-            return View(calisanlar);
+            return View(calisan);
         }
 
         // POST: Calisans/Delete/5

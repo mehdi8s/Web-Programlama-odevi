@@ -1,4 +1,6 @@
-﻿namespace AI_Kesim.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AI_Kesim.Models
 {
     public class Calisan
     {
@@ -27,6 +29,9 @@
     {
         public int Id { get; set; }
         public string Ad { get; set; }
+
+        [Required(ErrorMessage = "Ücret alanı zorunludur.")]
+        public int Ucret { get; set; }
 
         // Uzmanlıkla ilişkilendirilen çalışanlar
         public ICollection<CalisanUzmanlik> CalisanUzmanliklari { get; set; } = new List<CalisanUzmanlik>();

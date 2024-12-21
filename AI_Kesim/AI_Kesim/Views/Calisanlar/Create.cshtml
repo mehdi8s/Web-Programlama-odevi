@@ -4,34 +4,51 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Oluştur</h1>
-
-<h4>Çalışan</h4>
+<h1>Çalışan Oluştur</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- İsim -->
             <div class="form-group">
                 <label asp-for="Isim" class="control-label">İsim</label>
                 <input asp-for="Isim" class="form-control" />
                 <span asp-validation-for="Isim" class="text-danger"></span>
             </div>
+
+            <!-- Soyisim -->
             <div class="form-group">
                 <label asp-for="Soyisim" class="control-label">Soyisim</label>
                 <input asp-for="Soyisim" class="form-control" />
                 <span asp-validation-for="Soyisim" class="text-danger"></span>
             </div>
-         @*    <div class="form-group">
-                <label asp-for="UzmanlikAlani" class="control-label">Uzmanlık Alanı</label>
-                <input asp-for="UzmanlikAlani" class="form-control" />
-                <span asp-validation-for="UzmanlikAlani" class="text-danger"></span>
-            </div> *@
+
+            <!-- Maaş -->
             <div class="form-group">
                 <label asp-for="Maas" class="control-label">Maaş</label>
                 <input asp-for="Maas" class="form-control" />
                 <span asp-validation-for="Maas" class="text-danger"></span>
             </div>
+
+            <!-- Uzmanlık Alanları -->
+            <div class="form-group">
+                <label class="control-label">Uzmanlık Alanları</label>
+                <div>
+                    @foreach (var uzmanlik in (IEnumerable<dynamic>)ViewData["Uzmanliklar"])
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="UzmanlikIds" value="@uzmanlik.Id" id="uzmanlik_@uzmanlik.Id" />
+                            <label class="form-check-label" for="uzmanlik_@uzmanlik.Id">
+                                @uzmanlik.Ad
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Kaydet Butonu -->
             <div class="form-group">
                 <input type="submit" value="Oluştur" class="btn btn-primary" />
             </div>
@@ -40,9 +57,11 @@
 </div>
 
 <div>
-    <a asp-action="Index">Listeye Geri Dön</a>
+    <a asp-action="Index" class="btn btn-secondary">Listeye Geri Dön</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

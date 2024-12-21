@@ -11,10 +11,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddIdentity<UserDetails, IdentityRole>()
-    .AddDefaultTokenProviders()
-    .AddDefaultUI()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<UserDetails, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = false; // Rakam gereksinimi
+    options.Password.RequiredLength = 3; // Minimum uzunluk
+    options.Password.RequireNonAlphanumeric = false; // Özel karakter gereksinimi
+    options.Password.RequireUppercase = false; // Büyük harf gereksinimi
+    options.Password.RequireLowercase = false; // Küçük harf gereksinimi
+}).AddEntityFrameworkStores<ApplicationDbContext>()
+   .AddDefaultUI()
+  .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
 

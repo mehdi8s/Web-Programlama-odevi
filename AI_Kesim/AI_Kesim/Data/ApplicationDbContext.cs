@@ -10,5 +10,8 @@ namespace AI_Kesim.Data
             : base(options)
         {
         }
+        public DbSet<AI_Kesim.Models.Calisan> Calisan { get; set; } = default!;
+
     }
 }
+

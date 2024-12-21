@@ -93,7 +93,7 @@ namespace AI_Kesim.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "Şifre en az 3 karakterden oluşmalıdır", MinimumLength = 3)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -121,9 +121,9 @@ namespace AI_Kesim.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-
                 var user = CreateUser();
-                // Ad Soyad Register için eklenecekler
+
+                // Ad ve Soyad ekleme
                 user.UserFirstname = Input.UserFirstName;
                 user.UserLastname = Input.UserLastName;
 
@@ -134,6 +134,9 @@ namespace AI_Kesim.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    // Kullanıcıya "User" rolü atama
+                    await _userManager.AddToRoleAsync(user, "User");
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -163,9 +166,10 @@ namespace AI_Kesim.Areas.Identity.Pages.Account
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // Eğer kayıt başarısız olursa, form yeniden gösterilir
             return Page();
         }
+
 
         private UserDetails CreateUser()
         {

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AI_Kesim.Models
 {
@@ -22,7 +23,8 @@ namespace AI_Kesim.Models
         public int CalisanId { get; set; }
         public Calisan Calisan { get; set; }
 
-        public string SaatAraligi { get; set; } // Örneğin: "10:00-11:00"
+        [Required]
+        public DateTime Tarih { get; set; } // Çalışma tarihi (örnek: 22.12.2024)
     }
 
     public class Uzmanlik

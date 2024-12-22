@@ -52,10 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Melih/Desktop/Dersler/5.Dönem/WebProgramlama/Web-Programlama-odevi/AI_Kesim/AI_Kesim/Views/Admin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Melih/Desktop/Dersler/5.Dönem/WebProgramlama/Web-Programlama-odevi/AI_Kesim/AI_Kesim/Views/Calisanlar/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsaXNhbmxhclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,10 +78,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Melih/Desktop/Dersler/5.Dönem/WebProgramlama/Web-Programlama-odevi/AI_Kesim/AI_Kesim/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Melih/Desktop/Dersler/5.Dönem/WebProgramlama/Web-Programlama-odevi/AI_Kesim/AI_Kesim/Views/Randevu/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZGV2dVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Melih/Desktop/Dersler/5.Dönem/WebProgramlama/Web-Programlama-odevi/AI_Kesim/AI_Kesim/Views/Shared/Error.cshtml]

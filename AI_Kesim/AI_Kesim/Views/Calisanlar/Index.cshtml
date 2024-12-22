@@ -1,23 +1,31 @@
 ﻿@model IEnumerable<AI_Kesim.Models.Calisan>
-
 @{
     ViewData["Title"] = "Index";
-    var saatDilimleri = new List<string> { "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00" };
+    var seciliTarih = (DateTime)ViewData["SeciliTarih"];
 }
 
-<h1>Çalışanlar ve Çalışma Saatleri</h1>
+<h1>Çalışanlar ve Randevu Saatleri</h1>
 
 <p>
     <a asp-action="Create">Yeni Çalışan Ekle</a>
 </p>
+
+<div>
+    <form method="get" asp-action="Index">
+        <button type="submit" name="tarih" value="@seciliTarih.AddDays(-1)">← Geri</button>
+        <span>@seciliTarih.ToString("dd MMMM yyyy")</span>
+        <button type="submit" name="tarih" value="@seciliTarih.AddDays(1)">İleri →</button>
+    </form>
+</div>
+
 <table class="table">
     <thead>
         <tr>
             <th>İsim</th>
-            <th>@Html.DisplayNameFor(model => model.First().Soyisim)</th>
+            <th>Soyisim</th>
             <th>Uzmanlık Alanları</th>
             <th>Maaş</th>
-            <th>Çalışma Saatleri</th>
+            <th>Randevu Saatleri</th>
             <th>İşlemler</th>
         </tr>
     </thead>
@@ -38,10 +46,9 @@
                 <td>@item.Maas</td>
                 <td>
                     <ul>
-                        @foreach (var saat in saatDilimleri)
+                        @foreach (var saat in item.CalismaSaatleri.Where(cs => cs.Tarih.Date == seciliTarih.Date))
                         {
-                            var durum = item.CalismaSaatleri.Any(cs => cs.SaatAraligi == saat) ? "Dolu" : "Boş";
-                            <li>@saat - @durum</li>
+                            <li>@saat.Tarih.ToString("HH:mm") - Dolu</li>
                         }
                     </ul>
                 </td>

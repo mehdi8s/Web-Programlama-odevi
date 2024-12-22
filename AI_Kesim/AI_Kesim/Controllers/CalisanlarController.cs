@@ -20,13 +20,19 @@ namespace AI_Kesim.Controllers
         }
 
         // GET: Calisans
-        public IActionResult Index()
+        public IActionResult Index(DateTime? tarih)
         {
+            // Eğer bir tarih verilmediyse bugünün tarihi ile başlat
+            var seciliTarih = tarih ?? DateTime.Now;
+
+            // Çalışan verilerini ilgili tarihe göre alın
             var calisanlar = _context.Calisan
-                .Include(c => c.CalisanUzmanliklari) // Çalışan ve ilişkili uzmanlıkları dahil et
-                .ThenInclude(cu => cu.Uzmanlik)     // Ara tablodan Uzmanlıkları dahil et
+                .Include(c => c.CalisanUzmanliklari)
+                    .ThenInclude(cu => cu.Uzmanlik)
+                .Include(c => c.CalismaSaatleri)
                 .ToList();
 
+            ViewData["SeciliTarih"] = seciliTarih;
             return View(calisanlar);
         }
 

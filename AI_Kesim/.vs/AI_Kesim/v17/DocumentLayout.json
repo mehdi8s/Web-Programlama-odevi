@@ -3,145 +3,73 @@
   "WorkspaceRootPath": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\models\\randevumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\models\\randevumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\views\\randevu\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\views\\randevu\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\models\\calisanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\models\\calisanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\controllers\\calisanlarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\controllers\\calisanlarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AIKesim/True/SqlTable/dbo.Calisan.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\views\\calisanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\views\\calisanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AIKesim/True/SqlTable/dbo.CalismaSaatleri.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Data\\Migrations\\20241222142728_RandevuTarihiEkleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AI_Kesim\\Data\\Migrations\\20241222142728_RandevuTarihiEkleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Data\\Migrations\\20241222141235_CalismaTarhiEkleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AI_Kesim\\Data\\Migrations\\20241222141235_CalismaTarhiEkleme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AIKesim/True/SqlTable/dbo.CalisanUzmanliklari.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AI_Kesim\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AI_Kesim\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Randevu\\Create.cshtml",
+              "RelativeDocumentMoniker": "AI_Kesim\\Views\\Randevu\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Randevu\\Create.cshtml",
+              "RelativeToolTip": "AI_Kesim\\Views\\Randevu\\Create.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-22T14:55:18.152Z",
+              "WhenOpened": "2024-12-23T19:11:36.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CalisanlarController.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\CalisanlarController.cs",
-              "RelativeDocumentMoniker": "AI_Kesim\\Controllers\\CalisanlarController.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\CalisanlarController.cs",
-              "RelativeToolTip": "AI_Kesim\\Controllers\\CalisanlarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T14:28:03.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RandevuModel.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Models\\RandevuModel.cs",
-              "RelativeDocumentMoniker": "AI_Kesim\\Models\\RandevuModel.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Models\\RandevuModel.cs",
-              "RelativeToolTip": "AI_Kesim\\Models\\RandevuModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T13:57:01.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20241222141235_CalismaTarhiEkleme.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Data\\Migrations\\20241222141235_CalismaTarhiEkleme.cs",
-              "RelativeDocumentMoniker": "AI_Kesim\\Data\\Migrations\\20241222141235_CalismaTarhiEkleme.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Data\\Migrations\\20241222141235_CalismaTarhiEkleme.cs",
-              "RelativeToolTip": "AI_Kesim\\Data\\Migrations\\20241222141235_CalismaTarhiEkleme.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T14:12:35.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Calisanlar\\Index.cshtml",
-              "RelativeDocumentMoniker": "AI_Kesim\\Views\\Calisanlar\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Calisanlar\\Index.cshtml",
-              "RelativeToolTip": "AI_Kesim\\Views\\Calisanlar\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-22T14:26:57.273Z",
+              "Title": "dbo.Calisan [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AIKesim/True/SqlTable/dbo.Calisan.sql",
+              "ToolTip": "dbo.Calisan [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-23T19:09:44.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CalisanModel.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Models\\CalisanModel.cs",
-              "RelativeDocumentMoniker": "AI_Kesim\\Models\\CalisanModel.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Models\\CalisanModel.cs",
-              "RelativeToolTip": "AI_Kesim\\Models\\CalisanModel.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAiwDMAAAAAAAAAAAAAAA==",
+              "Title": "RandevuController.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\RandevuController.cs",
+              "RelativeDocumentMoniker": "AI_Kesim\\Controllers\\RandevuController.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\RandevuController.cs",
+              "RelativeToolTip": "AI_Kesim\\Controllers\\RandevuController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAIwGoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T14:00:53.643Z",
+              "WhenOpened": "2024-12-23T10:04:45.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dbo.CalismaSaatleri [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AIKesim/True/SqlTable/dbo.CalismaSaatleri.sql",
-              "ToolTip": "dbo.CalismaSaatleri [Data]",
+              "DocumentIndex": 3,
+              "Title": "dbo.CalisanUzmanliklari [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/AIKesim/True/SqlTable/dbo.CalisanUzmanliklari.sql",
+              "ToolTip": "dbo.CalisanUzmanliklari [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-12-22T14:46:18.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20241222142728_RandevuTarihiEkleme.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Data\\Migrations\\20241222142728_RandevuTarihiEkleme.cs",
-              "RelativeDocumentMoniker": "AI_Kesim\\Data\\Migrations\\20241222142728_RandevuTarihiEkleme.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Data\\Migrations\\20241222142728_RandevuTarihiEkleme.cs",
-              "RelativeToolTip": "AI_Kesim\\Data\\Migrations\\20241222142728_RandevuTarihiEkleme.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T14:27:29.543Z",
+              "WhenOpened": "2024-12-23T19:07:30.503Z",
               "EditorCaption": ""
             }
           ]

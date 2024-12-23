@@ -1,4 +1,4 @@
-using AI_Kesim.Data;
+ï»¿using AI_Kesim.Data;
 using AI_Kesim.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -15,14 +15,21 @@ builder.Services.AddIdentity<UserDetails, IdentityRole>(options =>
 {
     options.Password.RequireDigit = false; // Rakam gereksinimi
     options.Password.RequiredLength = 3; // Minimum uzunluk
-    options.Password.RequireNonAlphanumeric = false; // Özel karakter gereksinimi
-    options.Password.RequireUppercase = false; // Büyük harf gereksinimi
-    options.Password.RequireLowercase = false; // Küçük harf gereksinimi
+    options.Password.RequireNonAlphanumeric = false; // Ã–zel karakter gereksinimi
+    options.Password.RequireUppercase = false; // BÃ¼yÃ¼k harf gereksinimi
+    options.Password.RequireLowercase = false; // KÃ¼Ã§Ã¼k harf gereksinimi
 }).AddEntityFrameworkStores<ApplicationDbContext>()
    .AddDefaultUI()
    .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+    });
 
 var app = builder.Build();
 
@@ -58,16 +65,16 @@ async Task CreateRolesIfNotExist(IHost app)
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserDetails>>();
 
-    // E?er "User" rolü zaten varsa, i?lem yapma
+    // E?er "User" rolÃ¼ zaten varsa, i?lem yapma
     var roleExist = await roleManager.RoleExistsAsync("User");
     if (!roleExist)
     {
-        // "User" rolü olu?turuluyor
+        // "User" rolÃ¼ olu?turuluyor
         var role = new IdentityRole("User");
         await roleManager.CreateAsync(role);
     }
 
-    // E?er "Admin" rolü yoksa olu?turulabilir
+    // E?er "Admin" rolÃ¼ yoksa olu?turulabilir
     var adminRoleExist = await roleManager.RoleExistsAsync("Admin");
     if (!adminRoleExist)
     {

@@ -65,41 +65,17 @@ namespace AI_Kesim.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpGet]
+        [HttpGet("/Randevu/GetCalisanlar/{uzmanlikId}")]
         public async Task<IActionResult> GetCalisanlar(int uzmanlikId)
         {
-            //Console.WriteLine("kaccccc:" + uzmanlikId);
-            //var calisanlar = await _context.CalisanUzmanliklari
-            //    .Include(cu => cu.Calisan)
-            //    .Select(cu => new
-            //    {
-            //        Id = cu.Calisan.Id,
-            //        Isim = cu.Calisan.Isim,
-            //        Soyisim = cu.Calisan.Soyisim
-            //    })
-            //    .ToListAsync();
+            Console.WriteLine($"Gelen UzmanlikId: {uzmanlikId}");
+            if (uzmanlikId == 0)
+            {
+                return BadRequest("Uzmanlık ID sıfır olarak geldi!");
+            }
 
-            //return Json(calisanlar);
-
-
-
-            //var calisanlar = await _context.CalisanUzmanliklari
-            //    .Include(cu => cu.Calisan)
-            //    .Select(cu => new
-            //    {
-            //        Id = cu.Calisan.Id,
-            //        Isim = cu.Calisan.Isim,
-            //        Soyisim = cu.Calisan.Soyisim
-            //    })
-            //    .ToListAsync();
-
-            //return Json(calisanlar);
-
-
-           int  ttttt = 1;
-            Console.WriteLine("kaccccc:" + ttttt);
             var calisanlar = await _context.CalisanUzmanliklari
-                .Where(cu => cu.UzmanlikId == 1)
+                .Where(cu => cu.UzmanlikId == uzmanlikId)
                 .Include(cu => cu.Calisan)
                 .Select(cu => new
                 {
@@ -108,11 +84,10 @@ namespace AI_Kesim.Controllers
                     Soyisim = cu.Calisan.Soyisim
                 })
                 .ToListAsync();
+
             return Json(calisanlar);
-
-
-
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetAvailableTimes(int calisanId, DateTime tarih)

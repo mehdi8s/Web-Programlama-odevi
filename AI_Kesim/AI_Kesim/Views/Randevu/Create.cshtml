@@ -8,7 +8,7 @@
                     <form asp-action="Create" method="post">
                         <div class="form-group mb-3">
                             <label>Hizmet Seçimi</label>
-                            <select asp-for="UzmanlikId" class="form-control"
+                            <select asp-for="UzmanlikId" id="UzmanlikId" class="form-control"
                                     asp-items="@(new SelectList(ViewBag.Uzmanliklar, "Id", "Ad"))" required>
                                 <option value="">Hizmet Seçiniz</option>
                             </select>
@@ -16,7 +16,7 @@
 
                         <div class="form-group mb-3" id="calisanDiv" style="display:none">
                             <label>Çalışan Seçimi</label>
-                            <select asp-for="CalisanId" class="form-control" required>
+                            <select asp-for="CalisanId" id="CalisanId" class="form-control" required>
                                 <option value="">Çalışan Seçiniz</option>
                             </select>
                         </div>
@@ -27,7 +27,7 @@
                                    min="@DateTime.Now.ToString("yyyy-MM-dd")" required />
 
                             <label class="mt-3">Saat Seçimi</label>
-                            <select asp-for="RandevuTarihi" class="form-control" required>
+                            <select asp-for="RandevuTarihi" id="RandevuTarihi" class="form-control" required>
                                 <option value="">Saat Seçiniz</option>
                             </select>
                         </div>
@@ -45,27 +45,46 @@
 @section Scripts {
     <script>
         $(document).ready(function() {
-            $("#UzmanlikId").change(function() {
-                var uzmanlikId = $(this).val();
-                if (uzmanlikId) {
-                    $.get("/Randevu/GetCalisanlar/" + uzmanlikId, function(data) {
-                        var select = $("#CalisanId");
-                        select.empty();
-                        select.append('<option value="">Çalışan Seçiniz</option>');
-                        $.each(data, function(index, item) {
+            // Hizmet seçimi değiştiğinde çalışanları getir
+        $("#UzmanlikId").change(function () {
+            var uzmanlikId = $(this).val();
+            if (uzmanlikId) {
+                 console.log(uzmanlikId);
+                $.get("/Randevu/GetCalisanlar/" + uzmanlikId, function (data) {
+                    var select = $("#CalisanId");
+                    select.empty();
+                    select.append('<option value="">Çalışan Seçiniz</option>');
+                    // Gelen veri doğru şekilde işleniyor
+                    if (data.$values && data.$values.length > 0) {
+                        $.each(data.$values, function (index, item) {
                             select.append(`<option value="${item.id}">${item.isim} ${item.soyisim}</option>`);
                         });
-                        $("#calisanDiv").show();
-                    });
-                }
-            });
+                    } else {
+                        alert("Çalışan bulunamadı.");
+                    }
+                    $("#calisanDiv").show();
+                }).fail(function () {
+                    alert("Çalışanları getirirken bir hata oluştu.");
+                });
+            } else {
+                $("#calisanDiv").hide();
+                $("#tarihDiv").hide();
+                $("#submitBtn").hide();
+            }
+        });
+        
 
+            // Çalışan seçimi değiştiğinde tarih seçimini göster
             $("#CalisanId").change(function() {
                 if ($(this).val()) {
                     $("#tarihDiv").show();
+                } else {
+                    $("#tarihDiv").hide();
+                    $("#submitBtn").hide();
                 }
             });
 
+            // Tarih seçildiğinde uygun saatleri getir
             $("#tarihSelect").change(function() {
                 var tarih = $(this).val();
                 var calisanId = $("#CalisanId").val();
@@ -79,7 +98,11 @@
                             select.append(`<option value="${tarih}T${item.time}">${item.time}</option>`);
                         });
                         $("#submitBtn").show();
+                    }).fail(function() {
+                        alert("Saatleri getirirken bir hata oluştu.");
                     });
+                } else {
+                    $("#submitBtn").hide();
                 }
             });
         });

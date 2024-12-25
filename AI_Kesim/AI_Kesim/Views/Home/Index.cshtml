@@ -6,3 +6,15 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h2>Görsel Yükleyin ve Analiz Edin</h2>
+
+<form asp-controller="Vision" asp-action="AnalyzeImage" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="file">Görsel Yükle:</label>
+        <input type="file" id="file" name="file" />
+    </div>
+    <div>
+        <button type="submit">Analiz Et</button>
+    </div>
+</form>

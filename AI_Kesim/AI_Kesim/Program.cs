@@ -2,8 +2,17 @@
 using AI_Kesim.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.IO;
+using Google.Cloud.Vision.V1;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Google Cloud kimlik doðrulama dosyasýný ayarla
+
+Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "path_to_your_credentials.json");
+
+
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");

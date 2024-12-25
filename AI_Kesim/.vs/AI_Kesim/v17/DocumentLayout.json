@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\views\\randevu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\views\\randevu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\views\\randevu\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\views\\randevu\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Randevu\\Create.cshtml",
-              "RelativeDocumentMoniker": "AI_Kesim\\Views\\Randevu\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Randevu\\Create.cshtml",
-              "RelativeToolTip": "AI_Kesim\\Views\\Randevu\\Create.cshtml",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwDMAAAApAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Randevu\\Index.cshtml",
+              "RelativeDocumentMoniker": "AI_Kesim\\Views\\Randevu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Randevu\\Index.cshtml",
+              "RelativeToolTip": "AI_Kesim\\Views\\Randevu\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-23T19:11:36.979Z",
+              "WhenOpened": "2024-12-25T17:30:33.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RandevuController.cs",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\RandevuController.cs",
               "RelativeDocumentMoniker": "AI_Kesim\\Controllers\\RandevuController.cs",
               "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\RandevuController.cs",
               "RelativeToolTip": "AI_Kesim\\Controllers\\RandevuController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAQwFsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAcwHUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T10:04:45.873Z",
               "EditorCaption": ""

@@ -52,26 +52,38 @@ namespace AI_Kesim.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Randevu model)
         {
-            if (!ModelState.IsValid)
+            try
             {
+                model.UserId = _userManager.GetUserId(User);
+                model.Uzmanlik = await _context.Uzmanliklar.FindAsync(model.UzmanlikId);
+                model.Calisan = await _context.Calisan.FindAsync(model.CalisanId);
+                model.User = await _userManager.FindByIdAsync(model.UserId);
+
+                if (model.Uzmanlik == null || model.Calisan == null || model.User == null)
+                {
+                    ModelState.AddModelError("", "Geçersiz veri");
+                    ViewBag.Uzmanliklar = await _context.Uzmanliklar.ToListAsync();
+                    return View(model);
+                }
+
+                _context.Randevular.Add(model);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Randevu kaydedilirken bir hata oluştu.");
                 ViewBag.Uzmanliklar = await _context.Uzmanliklar.ToListAsync();
                 return View(model);
             }
-
-            model.UserId = _userManager.GetUserId(User);
-            _context.Randevular.Add(model);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet("/Randevu/GetCalisanlar/{uzmanlikId}")]
         public async Task<IActionResult> GetCalisanlar(int uzmanlikId)
         {
-            Console.WriteLine($"Gelen UzmanlikId: {uzmanlikId}");
             if (uzmanlikId == 0)
             {
-                return BadRequest("Uzmanlık ID sıfır olarak geldi!");
+                //return BadRequest("Uzmanlık ID sıfır olarak geldi!");
             }
 
             var calisanlar = await _context.CalisanUzmanliklari
@@ -88,7 +100,6 @@ namespace AI_Kesim.Controllers
             return Json(calisanlar);
         }
 
-
         [HttpGet]
         public async Task<IActionResult> GetAvailableTimes(int calisanId, DateTime tarih)
         {
@@ -99,9 +110,20 @@ namespace AI_Kesim.Controllers
 
             var availableTimes = Enumerable.Range(12, 7)
                 .Except(existingRandevular)
-                .Select(hour => new { Hour = hour, Time = $"{hour}:00" });
-
+                .Select(hour => new { Hour = hour, Time = $"{hour}:00" })
+                .ToList();
             return Json(availableTimes);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var randevu = await _context.Randevular.FindAsync(id);
+            if (randevu == null) return NotFound();
+
+            _context.Randevular.Remove(randevu);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

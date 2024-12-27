@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\controllers\\clarifaiservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\controllers\\clarifaiservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|c:\\users\\melih\\desktop\\dersler\\5.d\u00F6nem\\webprogramlama\\web-programlama-odevi\\ai_kesim\\ai_kesim\\views\\calisanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6874DF26-016A-4909-9261-037B11F90333}|AI_Kesim\\AI_Kesim.csproj|solutionrelative:ai_kesim\\views\\calisanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,11 +30,37 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "ClarifaiServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\ClarifaiServiceController.cs",
+              "RelativeDocumentMoniker": "AI_Kesim\\Controllers\\ClarifaiServiceController.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\ClarifaiServiceController.cs",
+              "RelativeToolTip": "AI_Kesim\\Controllers\\ClarifaiServiceController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T17:38:26.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AI_Kesim\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AI_Kesim\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T17:36:51.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CalisanModel.cs",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Models\\CalisanModel.cs",
               "RelativeDocumentMoniker": "AI_Kesim\\Models\\CalisanModel.cs",
@@ -38,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CalisanlarController.cs",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Controllers\\CalisanlarController.cs",
               "RelativeDocumentMoniker": "AI_Kesim\\Controllers\\CalisanlarController.cs",
@@ -46,12 +80,11 @@
               "RelativeToolTip": "AI_Kesim\\Controllers\\CalisanlarController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA1wBUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:21:38.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:21:38.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\Dersler\\5.D\u00F6nem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\Views\\Calisanlar\\Index.cshtml",
               "RelativeDocumentMoniker": "AI_Kesim\\Views\\Calisanlar\\Index.cshtml",

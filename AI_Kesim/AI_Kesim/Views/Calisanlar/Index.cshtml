@@ -2,13 +2,10 @@
 @{
     ViewData["Title"] = "Index";
     var seciliTarih = (DateTime)ViewData["SeciliTarih"];
+    var randevular = (List<AI_Kesim.Models.Randevu>)ViewData["Randevular"];
 }
 
 <h1>Çalışanlar ve Randevu Saatleri</h1>
-
-<p>
-    <a asp-action="Create">Yeni Çalışan Ekle</a>
-</p>
 
 <div>
     <form method="get" asp-action="Index">
@@ -30,32 +27,32 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var calisan in Model)
         {
             <tr>
-                <td>@item.Isim</td>
-                <td>@item.Soyisim</td>
+                <td>@calisan.Isim</td>
+                <td>@calisan.Soyisim</td>
                 <td>
                     <ul>
-                        @foreach (var uzmanlik in item.CalisanUzmanliklari)
+                        @foreach (var uzmanlik in calisan.CalisanUzmanliklari)
                         {
                             <li>@uzmanlik.Uzmanlik.Ad</li>
                         }
                     </ul>
                 </td>
-                <td>@item.Maas</td>
+                <td>@calisan.Maas.ToString()</td>
                 <td>
                     <ul>
-                        @foreach (var saat in item.CalismaSaatleri.Where(cs => cs.Tarih.Date == seciliTarih.Date))
+                        @foreach (var randevu in randevular.Where(r => r.CalisanId == calisan.Id))
                         {
-                            <li>@saat.Tarih.ToString("HH:mm") - Dolu</li>
+                            <li>@randevu.RandevuTarihi.ToString("HH:mm")</li>
                         }
                     </ul>
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                    <a asp-action="Edit" asp-route-id="@calisan.Id">Düzenle</a> |
+                    <a asp-action="Details" asp-route-id="@calisan.Id">Detaylar</a> |
+                    <a asp-action="Delete" asp-route-id="@calisan.Id">Sil</a>
                 </td>
             </tr>
         }

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AI_Kesim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+171a6020dcad97562ebeae8f5d726fd9c1218b0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc8bf1f343b2459bb6dc0b2dd83e7d7681c692bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("AI_Kesim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AI_Kesim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

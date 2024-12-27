@@ -18,23 +18,32 @@ namespace AI_Kesim.Controllers
         {
             _context = context;
         }
-
         // GET: Calisans
         public IActionResult Index(DateTime? tarih)
         {
             // Eğer bir tarih verilmediyse bugünün tarihi ile başlat
             var seciliTarih = tarih ?? DateTime.Now;
 
-            // Çalışan verilerini ilgili tarihe göre alın
+            // Çalışan verilerini alın
             var calisanlar = _context.Calisan
                 .Include(c => c.CalisanUzmanliklari)
                     .ThenInclude(cu => cu.Uzmanlik)
                 .Include(c => c.CalismaSaatleri)
                 .ToList();
 
+            // Randevuları ilgili tarihe göre alın
+            var randevular = _context.Randevular
+                .Include(r => r.Uzmanlik)
+                .Include(r => r.Calisan)
+                .Where(r => r.RandevuTarihi.Date == seciliTarih.Date)
+                .ToList();
+
             ViewData["SeciliTarih"] = seciliTarih;
+            ViewData["Randevular"] = randevular; // Randevuları View'e gönder
             return View(calisanlar);
         }
+
+
 
 
         // GET: Calisanlar/Details/5

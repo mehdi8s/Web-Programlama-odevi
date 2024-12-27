@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XG8lCFExSudVVK8Tlrc0qD2N9yhMr93d41xXj7skvn0=",
+  "Hash": "CzzywygzG+E5r3ZUKUMs3jObG4mfV/8D+/d/zfPjA4c=",
   "Source": "AI_Kesim",
   "BasePath": "_content/AI_Kesim",
   "Mode": "Default",
@@ -1359,6 +1359,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber1.jpg",
+      "SourceId": "AI_Kesim",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\",
+      "BasePath": "_content/AI_Kesim",
+      "RelativePath": "images/berber1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i87lphek1c",
+      "Integrity": "4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\berber1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber2.jpg",
+      "SourceId": "AI_Kesim",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\",
+      "BasePath": "_content/AI_Kesim",
+      "RelativePath": "images/berber2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "14u355kv3c",
+      "Integrity": "z+ttdpQnF9uoB5knAnHjgtV9D1thB15EE+MasqGMglE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\berber2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber3.jpg",
+      "SourceId": "AI_Kesim",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\",
+      "BasePath": "_content/AI_Kesim",
+      "RelativePath": "images/berber3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zzh8krlw8m",
+      "Integrity": "4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\berber3.jpg"
     },
     {
       "Identity": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\js\\site.js",
@@ -5125,6 +5188,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "images/berber1.i87lphek1c.jpg",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Dec 2024 11:02:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i87lphek1c"
+        },
+        {
+          "Name": "label",
+          "Value": "images/berber1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY="
+        }
+      ]
+    },
+    {
+      "Route": "images/berber1.jpg",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Dec 2024 11:02:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY="
+        }
+      ]
+    },
+    {
+      "Route": "images/berber2.14u355kv3c.jpg",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+ttdpQnF9uoB5knAnHjgtV9D1thB15EE+MasqGMglE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Dec 2024 11:02:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "14u355kv3c"
+        },
+        {
+          "Name": "label",
+          "Value": "images/berber2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+ttdpQnF9uoB5knAnHjgtV9D1thB15EE+MasqGMglE="
+        }
+      ]
+    },
+    {
+      "Route": "images/berber2.jpg",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10729"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+ttdpQnF9uoB5knAnHjgtV9D1thB15EE+MasqGMglE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Dec 2024 11:02:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+ttdpQnF9uoB5knAnHjgtV9D1thB15EE+MasqGMglE="
+        }
+      ]
+    },
+    {
+      "Route": "images/berber3.jpg",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7173"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Dec 2024 11:02:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo="
+        }
+      ]
+    },
+    {
+      "Route": "images/berber3.zzh8krlw8m.jpg",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7173"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Dec 2024 11:02:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zzh8krlw8m"
+        },
+        {
+          "Name": "label",
+          "Value": "images/berber3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo="
         }
       ]
     },

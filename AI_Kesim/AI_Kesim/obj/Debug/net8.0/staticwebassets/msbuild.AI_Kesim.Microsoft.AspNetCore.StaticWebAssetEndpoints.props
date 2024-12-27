@@ -36,6 +36,42 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 18 Dec 2024 14:28:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AI_Kesim/images/berber1.i87lphek1c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\berber1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i87lphek1c"},{"Name":"integrity","Value":"sha256-4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY="},{"Name":"label","Value":"_content/AI_Kesim/images/berber1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7236"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00224pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Dec 2024 11:02:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AI_Kesim/images/berber1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\berber1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7236"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00224pR1gjEF4LlNy1sN6iO5wEnXETh3ncFPcIQ/5B7K2YY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Dec 2024 11:02:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AI_Kesim/images/berber2.14u355kv3c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\berber2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"14u355kv3c"},{"Name":"integrity","Value":"sha256-z\u002BttdpQnF9uoB5knAnHjgtV9D1thB15EE\u002BMasqGMglE="},{"Name":"label","Value":"_content/AI_Kesim/images/berber2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10729"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022z\u002BttdpQnF9uoB5knAnHjgtV9D1thB15EE\u002BMasqGMglE=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Dec 2024 11:02:32 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AI_Kesim/images/berber2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\berber2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-z\u002BttdpQnF9uoB5knAnHjgtV9D1thB15EE\u002BMasqGMglE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10729"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022z\u002BttdpQnF9uoB5knAnHjgtV9D1thB15EE\u002BMasqGMglE=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Dec 2024 11:02:32 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AI_Kesim/images/berber3.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\berber3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7173"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00224cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Dec 2024 11:02:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AI_Kesim/images/berber3.zzh8krlw8m.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\berber3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zzh8krlw8m"},{"Name":"integrity","Value":"sha256-4cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo="},{"Name":"label","Value":"_content/AI_Kesim/images/berber3.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7173"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00224cLFuKKM79biNt2MCYAIjX7z7W/0lIEh0mVAXNq9sYo=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Dec 2024 11:02:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AI_Kesim/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

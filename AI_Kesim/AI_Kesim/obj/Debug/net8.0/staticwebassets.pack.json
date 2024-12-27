@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber1.jpg",
+      "PackagePath": "staticwebassets\\images\\berber1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber2.jpg",
+      "PackagePath": "staticwebassets\\images\\berber2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\images\\berber3.jpg",
+      "PackagePath": "staticwebassets\\images\\berber3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

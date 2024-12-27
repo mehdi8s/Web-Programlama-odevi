@@ -4,72 +4,86 @@
     ViewData["Title"] = "Yeni Kullanıcı Kayıt Formu";
 }
 
-<h1>@ViewData["Title"]</h1>
+<div class="container py-5">
+    <div class="row justify-content-end">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>@ViewData["Title"]</h3>
+                </div>
+                <div class="card-body">
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <h5 class="text-secondary text-center mb-4">Yeni bir hesap oluşturun</h5>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert" style="display:none;"></div>
 
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Yeni bir hesap oluşturun</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.UserFirstName" class="form-control" autocomplete="userfirstname" aria-required="true" placeholder="Ad Giriniz" />
-                <label asp-for="Input.UserFirstName">Kullanıcı Adı</label>
-                <span asp-validation-for="Input.UserFirstName" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.UserLastName" class="form-control" autocomplete="userlastname" aria-required="true" placeholder="Soyad giriniz" />
-                <label asp-for="Input.UserLastName">Kullanıcı Soyadı</label>
-                <span asp-validation-for="Input.UserLastName" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Şifre</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Şifre Onayla</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Kayıt Ol</button>
-        </form>
-    </div>
-@*     <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.UserFirstName" class="form-control" autocomplete="userfirstname" placeholder="Ad Giriniz" />
+                            <label asp-for="Input.UserFirstName">Ad</label>
+                            <span asp-validation-for="Input.UserFirstName" class="text-danger small"></span>
                         </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.UserLastName" class="form-control" autocomplete="userlastname" placeholder="Soyad Giriniz" />
+                            <label asp-for="Input.UserLastName">Soyad</label>
+                            <span asp-validation-for="Input.UserLastName" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="name@example.com" />
+                            <label asp-for="Input.Email">Email</label>
+                            <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" type="password" class="form-control" autocomplete="new-password" placeholder="Şifre" />
+                            <label asp-for="Input.Password">Şifre</label>
+                            <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.ConfirmPassword" type="password" class="form-control" autocomplete="new-password" placeholder="Şifre Onayla" />
+                            <label asp-for="Input.ConfirmPassword">Şifre Onayla</label>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
+                        </div>
+
+                        <button id="registerSubmit" type="submit" class="btn btn-primary w-100 py-2">Kayıt Ol</button>
                     </form>
-                }
-            }
-        </section>
-    </div> *@
+                </div>
+                <div class="card-footer text-center text-muted">
+                    Zaten hesabınız var mı? <a href="/Login" class="text-primary">Giriş Yapın</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 d-none d-lg-block">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/berber1.jpg" class="d-block w-100" alt="Barber 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/berber2.jpg" class="d-block w-100" alt="Barber 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/berber3.jpg" class="d-block w-100" alt="Barber 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

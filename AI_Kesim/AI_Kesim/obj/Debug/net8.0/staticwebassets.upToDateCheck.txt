@@ -1,5 +1,8 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\berber1.jpg
+wwwroot\images\berber2.jpg
+wwwroot\images\berber3.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

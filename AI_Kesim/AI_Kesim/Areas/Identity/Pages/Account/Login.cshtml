@@ -5,46 +5,52 @@
     ViewData["Title"] = "Giriş Yap";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-5    ">
-        <section>
-            <form id="account" method="post">
-                <h2>Yerel bir hesap kullanarak giriş yap</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>@ViewData["Title"]</h3>
                 </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Şifre</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                <div class="card-body">
+                    <form id="account" method="post">
+                        <h5 class="text-secondary text-center mb-4">Yerel bir hesap kullanarak giriş yap</h5>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="name@example.com" />
+                            <label asp-for="Input.Email">Email</label>
+                            <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" type="password" class="form-control" autocomplete="current-password" placeholder="Şifre" />
+                            <label asp-for="Input.Password">Şifre</label>
+                            <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" asp-for="Input.RememberMe" id="rememberMeCheck" />
+                            <label class="form-check-label" for="rememberMeCheck">Beni Hatırla</label>
+                        </div>
+
+                        <button id="login-submit" type="submit" class="btn btn-primary w-100 py-2">Giriş Yap</button>
+
+                        <div class="mt-4 text-center">
+                            <p>
+                                <a id="forgot-password" class="text-primary" asp-page="./ForgotPassword">Şifrenizi mi unuttunuz?</a>
+                            </p>
+                            <p>
+                                <a class="text-primary" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Yeni kullanıcı olarak kaydolun</a>
+                            </p>
+                            <p>
+                                <a id="resend-confirmation" class="text-primary" asp-page="./ResendEmailConfirmation">E-posta onayını yeniden gönder</a>
+                            </p>
+                        </div>
+                    </form>
                 </div>
-                <div class="checkbox mb-3">
-                    <label class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        Beni Hatırla
-                    </label>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Giriş Yap</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Şifrenizi mi unuttunuz?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Yeni kullanıcı olarak kaydolun</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">E-posta onayını yeniden gönder</a>
-                    </p>
-                </div>
-            </form>
-        </section>
+            </div>
+        </div>
     </div>
 </div>
 

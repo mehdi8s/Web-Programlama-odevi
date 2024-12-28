@@ -4,28 +4,31 @@
     var secilenUzmanliklar = (List<int>)ViewData["SecilenUzmanliklar"] ?? new List<int>();
 }
 
-<h1>Düzenle</h1>
-<h4>Çalışan</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<h1 class="text-center my-4">Çalışan Düzenle</h1>
+<div class="card shadow-sm mx-auto" style="max-width: 600px;">
+    <div class="card-body">
         <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert" style="display: none;"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Isim" class="control-label">İsim</label>
-                <input asp-for="Isim" class="form-control" />
+
+            <!-- İsim -->
+            <div class="mb-3">
+                <label asp-for="Isim" class="form-label">İsim</label>
+                <input asp-for="Isim" class="form-control" placeholder="İsim giriniz" />
                 <span asp-validation-for="Isim" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Soyisim" class="control-label">Soyisim</label>
-                <input asp-for="Soyisim" class="form-control" />
+
+            <!-- Soyisim -->
+            <div class="mb-3">
+                <label asp-for="Soyisim" class="form-label">Soyisim</label>
+                <input asp-for="Soyisim" class="form-control" placeholder="Soyisim giriniz" />
                 <span asp-validation-for="Soyisim" class="text-danger"></span>
             </div>
+
             <!-- Uzmanlık Alanları -->
-            <div class="form-group">
-                <label class="control-label">Uzmanlık Alanları</label>
-                <div>
+            <div class="mb-3">
+                <label class="form-label">Uzmanlık Alanları</label>
+                <div class="border rounded p-3">
                     @foreach (var uzmanlik in (IEnumerable<dynamic>)ViewData["Uzmanliklar"])
                     {
                         <div class="form-check">
@@ -42,24 +45,26 @@
                     }
                 </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Maas" class="control-label">Maaş</label>
-                <input asp-for="Maas" class="form-control" />
+
+            <!-- Maaş -->
+            <div class="mb-3">
+                <label asp-for="Maas" class="form-label">Maaş</label>
+                <input asp-for="Maas" class="form-control" placeholder="Maaş giriniz" />
                 <span asp-validation-for="Maas" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Kaydet" class="btn btn-primary" />
+
+            <!-- Kaydet Button -->
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-outline-secondary">Listeye Geri Dön</a>
+                <button type="submit" class="btn btn-primary">Kaydet</button>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Listeye Geri Dön</a>
-</div>
-
 @section Scripts {
     @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CzzywygzG+E5r3ZUKUMs3jObG4mfV/8D+/d/zfPjA4c=",
+  "Hash": "RO1+KImu45fgBiH9/BKy1BaQDX2GhSacvvz+ilafZZk=",
   "Source": "AI_Kesim",
   "BasePath": "_content/AI_Kesim",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "o6n4w712ic",
+      "Integrity": "YHqfAgEHbSYkAxxJ+oB05Z+UAdHKpFxPgrEtzGJlbX0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2808,51 +2808,6 @@
       ]
     },
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "362"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 14:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2863,7 +2818,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "608"
         },
         {
           "Name": "Content-Type",
@@ -2871,11 +2826,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"YHqfAgEHbSYkAxxJ+oB05Z+UAdHKpFxPgrEtzGJlbX0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 14:28:27 GMT"
+          "Value": "Sat, 28 Dec 2024 09:45:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2885,7 +2840,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-YHqfAgEHbSYkAxxJ+oB05Z+UAdHKpFxPgrEtzGJlbX0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.o6n4w712ic.css",
+      "AssetFile": "C:\\Users\\Melih\\Desktop\\Dersler\\5.Dönem\\WebProgramlama\\Web-Programlama-odevi\\AI_Kesim\\AI_Kesim\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "608"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YHqfAgEHbSYkAxxJ+oB05Z+UAdHKpFxPgrEtzGJlbX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 09:45:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o6n4w712ic"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YHqfAgEHbSYkAxxJ+oB05Z+UAdHKpFxPgrEtzGJlbX0="
         }
       ]
     },

@@ -1,30 +1,63 @@
 ﻿@model AI_Kesim.Models.Uzmanlik
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detaylar";
 }
 
-<h1>Detaylar</h1>
+<h1 class="display-4 text-center my-4">Uzmanlık Detayları</h1>
 
-<div>
-    <h4>Uzmanlık</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ad)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ad)
-        </dd>
-        <dt class="col-sm-2">
-            Ücret
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Ucret)
-        </dd>
-    </dl>
+<div class="container">
+    <div class="card shadow-sm p-4">
+        <h4 class="text-center mb-4">Bilgiler</h4>
+        <dl class="row">
+            <!-- Uzmanlık Adı -->
+            <dt class="col-sm-4 text-primary">Uzmanlık Adı:</dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Ad)
+            </dd>
+
+            <!-- Ücret -->
+            <dt class="col-sm-4 text-primary">Ücret:</dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Ucret) TL
+            </dd>
+        </dl>
+    </div>
+
+    <!-- Butonlar -->
+    <div class="text-center mt-4">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning btn-lg mx-2">Düzenle</a>
+        <a asp-action="Index" class="btn btn-outline-primary btn-lg mx-2">Listeye Geri Dön</a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Düzenle</a> |
-    <a asp-action="Index">Listeye Geri Dön</a>
-</div>
+
+<style>
+    body {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        max-width: 600px;
+        margin-top: 2rem;
+    }
+
+    .card {
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    .btn-lg {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .text-primary {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+</style>

@@ -1,46 +1,69 @@
 ﻿@model IEnumerable<AI_Kesim.Models.Uzmanlik>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Uzmanlık Alanları";
 }
-<h1>Uzmanlık Alanları</h1>
-<p>
-    <a asp-action="Create">Yeni uzmanlık alanı oluştur</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Ad)
-            </th>
-            <th>
-                Ücret
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ad)
-            </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Ucret)
-                </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-<form action="@Url.Action("Index", "Calisanlar")" method="get">
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">
-            Admin Paneline Geri Dön
-        </button>
-    </div>
-</form>
+
+<h1 class="display-4 text-center my-4">Uzmanlık Alanları</h1>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle fs-5">
+        <thead class="table-dark">
+            <tr>
+                <th class="text-center">Uzmanlık Adı</th>
+                <th class="text-center">Ücret</th>
+                <th class="text-center">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@Html.DisplayFor(modelItem => item.Ad)</td>
+                    <td class="text-center">@($"{item.Ucret:C}")</td>
+                    <td class="text-center">
+                        <div class="btn-group" role="group">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">Düzenle</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm">Detaylar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm">Sil</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Butonlar Tablo Altında -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <!-- Yeni Uzmanlık Alanı Oluştur Butonu -->
+    <a asp-action="Create" class="btn btn-success btn-lg">Yeni Uzmanlık Alanı Oluştur</a>
+
+    <!-- Admin Paneline Geri Dön Butonu -->
+    <form action="@Url.Action("Index", "Calisanlar")" method="get">
+        <button type="submit" class="btn btn-primary btn-lg">Admin Paneline Geri Dön</button>
+    </form>
+</div>
+
+<style>
+    body {
+        font-size: 1.2rem; /* Genel yazı büyüklüğü */
+    }
+
+    .table th, .table td {
+        padding: 1rem; /* Tablo hücreleri için geniş aralık */
+    }
+
+    .btn-lg {
+        font-size: 1.2rem; /* Büyük buton yazı büyüklüğü */
+        padding: 0.6rem 1.2rem; /* Buton iç boşlukları */
+    }
+
+    .table {
+        margin-top: 1rem; /* Tablo üst boşluğu */
+    }
+
+    .btn-group .btn {
+        margin: 0 0.2rem; /* Butonlar arasında küçük boşluk */
+    }
+</style>

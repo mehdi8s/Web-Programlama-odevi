@@ -1,38 +1,68 @@
 ﻿@model AI_Kesim.Models.Uzmanlik
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Oluştur";
 }
 
-<h1>Oluştur</h1>
+<h1 class="display-4 text-center my-4">Yeni Uzmanlık Oluştur</h1>
 
-<h4>Uzmanlık</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="container">
+    <div class="card shadow-sm p-4">
+        <h4 class="text-center mb-4">Bilgileri Girin</h4>
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger">Ad</div>
-            <div class="form-group">
-                <label asp-for="Ad" class="control-label"></label>
-                <input asp-for="Ad" class="form-control" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Uzmanlık Adı -->
+            <div class="form-group mb-3">
+                <label asp-for="Ad" class="form-label">Uzmanlık Adı</label>
+                <input asp-for="Ad" class="form-control" placeholder="Örn: Saç Kesimi" />
                 <span asp-validation-for="Ad" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Ucret" class="control-label">Ücret</label>
-                <input asp-for="Ucret" class="form-control" />
-                <span asp-validation-for="Ad" class="text-danger"></span>
+
+            <!-- Ücret -->
+            <div class="form-group mb-3">
+                <label asp-for="Ucret" class="form-label">Ücret (TL)</label>
+                <input asp-for="Ucret" class="form-control" placeholder="Örn: 150 TL" />
+                <span asp-validation-for="Ucret" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Oluştur" class="btn btn-primary" />
+
+            <!-- İşlem Butonları -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success btn-lg mx-2">Oluştur</button>
+                <a asp-action="Index" class="btn btn-outline-secondary btn-lg mx-2">Listeye Geri Dön</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Listeye Geri Dön</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+<style>
+    body {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        max-width: 600px;
+        margin-top: 2rem;
+    }
+
+    .card {
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+
+    .btn-lg {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .form-label {
+        font-weight: 500;
+    }
+</style>

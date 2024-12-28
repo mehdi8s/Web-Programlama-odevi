@@ -1,22 +1,36 @@
-html {
-  font-size: 14px;
+/* site.css */
+.custom-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    margin: 20px 0;
+    border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    .custom-card:hover {
+        transform: scale(1.02);
+    }
+
+.custom-card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.custom-card-body {
+    padding: 20px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.btn-custom {
+    margin-top: 15px;
 }
 
-body {
-  margin-bottom: 60px;
+.form-check {
+    margin: 5px 0;
+}
+
+.badge-primary {
+    background-color: #007bff;
 }

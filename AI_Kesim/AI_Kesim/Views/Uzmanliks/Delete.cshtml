@@ -1,33 +1,58 @@
 ﻿@model AI_Kesim.Models.Uzmanlik
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Sil";
 }
 
-<h1>Sil</h1>
+<h1 class="display-4 text-center my-4 text-danger">Silme İşlemi</h1>
 
-<h3>Bunu silmek istediğinizden emin misiniz?</h3>
-<div>
-    <h4>Uzmanlık</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ad)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ad)
-        </dd>
-        <dt class="col-sm-2">
-            Ücret
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Ucret)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Sil" class="btn btn-danger" /> |
-        <a asp-action="Index">Listeye Geri Dön</a>
-    </form>
+<div class="container">
+    <div class="card shadow-sm p-4">
+        <h4 class="text-center text-danger">Bunu silmek istediğinizden emin misiniz?</h4>
+        <hr />
+        <dl class="row">
+            <!-- Uzmanlık Adı -->
+            <dt class="col-sm-4 text-primary">Uzmanlık Adı:</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Ad)</dd>
+
+            <!-- Ücret -->
+            <dt class="col-sm-4 text-primary">Ücret:</dt>
+            <dd class="col-sm-8">@Html.DisplayFor(model => model.Ucret) TL</dd>
+        </dl>
+    </div>
+
+    <!-- İşlem Butonları -->
+    <div class="text-center mt-4">
+        <form asp-action="Delete" class="d-inline-block">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger btn-lg mx-2">Sil</button>
+        </form>
+        <a asp-action="Index" class="btn btn-outline-secondary btn-lg mx-2">Listeye Geri Dön</a>
+    </div>
 </div>
+
+<style>
+    body {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        max-width: 600px;
+        margin-top: 2rem;
+    }
+
+    .card {
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+
+    .text-primary {
+        font-weight: 500;
+    }
+
+    .btn-lg {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+    }
+</style>

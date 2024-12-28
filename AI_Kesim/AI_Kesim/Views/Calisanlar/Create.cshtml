@@ -1,13 +1,14 @@
 ﻿@model AI_Kesim.Models.Calisan
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Çalışan Oluştur";
 }
 
-<h1>Çalışan Oluştur</h1>
-<hr />
-<div class="row">
-    <div class="col-md-6">
+<div class="custom-card">
+    <div class="custom-card-header">
+        <h1>Çalışan Oluştur</h1>
+    </div>
+    <div class="custom-card-body">
         <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -50,14 +51,11 @@
 
             <!-- Kaydet Butonu -->
             <div class="form-group">
-                <input type="submit" value="Oluştur" class="btn btn-primary" />
+                <input type="submit" value="Oluştur" class="btn btn-primary btn-custom" />
             </div>
         </form>
+        <a asp-action="Index" class="btn btn-secondary btn-custom">Listeye Geri Dön</a>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index" class="btn btn-secondary">Listeye Geri Dön</a>
 </div>
 
 @section Scripts {

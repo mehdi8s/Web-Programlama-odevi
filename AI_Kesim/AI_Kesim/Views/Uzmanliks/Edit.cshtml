@@ -1,39 +1,80 @@
 ﻿@model AI_Kesim.Models.Uzmanlik
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Düzenle";
 }
 
-<h1>Düzenle</h1>
+<h1 class="display-4 text-center my-4">Uzmanlık Düzenle</h1>
 
-<h4>Uzmanlık</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Ad" class="control-label"></label>
-                <input asp-for="Ad" class="form-control" />
-                <span asp-validation-for="Ad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ucret" class="control-label">Ücret</label>
-                <input asp-for="Ucret" class="form-control" />
-                <span asp-validation-for="Ad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Kaydet" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container">
+    <h4 class="text-center">Uzmanlık Alanı Bilgilerini Düzenleyin</h4>
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <!-- Gizli Id Alanı -->
+                <input type="hidden" asp-for="Id" />
+
+                <!-- Uzmanlık Adı -->
+                <div class="form-group mb-3">
+                    <label asp-for="Ad" class="control-label">Uzmanlık Adı</label>
+                    <input asp-for="Ad" class="form-control" />
+                    <span asp-validation-for="Ad" class="text-danger"></span>
+                </div>
+
+                <!-- Ücret -->
+                <div class="form-group mb-3">
+                    <label asp-for="Ucret" class="control-label">Ücret</label>
+                    <input asp-for="Ucret" class="form-control" />
+                    <span asp-validation-for="Ucret" class="text-danger"></span>
+                </div>
+
+                <!-- Kaydet Butonu -->
+                <div class="form-group text-center">
+                    <input type="submit" value="Kaydet" class="btn btn-success btn-lg" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Listeye Geri Dön -->
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-outline-primary btn-lg">Listeye Geri Dön</a>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Listeye Geri Dön</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+<style>
+    body {
+        font-size: 1.25rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-lg {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .container {
+        margin-top: 2rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+</style>

@@ -5,6 +5,8 @@ namespace AI_Kesim.Models
 {
     public class Calisan
     {
+        internal readonly object Randevular;
+
         public int Id { get; set; }
         public string Isim { get; set; }
         public string Soyisim { get; set; }

@@ -233,15 +233,21 @@ namespace AI_Kesim.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var calisanlar = await _context.Calisan.FindAsync(id);
-            if (calisanlar != null)
+            // İlgili çalışanın randevularını sil
+            var randevular = await _context.Randevular.Where(r => r.CalisanId == id).ToListAsync();
+            _context.Randevular.RemoveRange(randevular);
+
+            // Çalışanı sil
+            var calisan = await _context.Calisan.FindAsync(id);
+            if (calisan != null)
             {
-                _context.Calisan.Remove(calisanlar);
+                _context.Calisan.Remove(calisan);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool CalisanExists(int id)
         {

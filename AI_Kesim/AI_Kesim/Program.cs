@@ -32,6 +32,7 @@ builder.Services.AddIdentity<UserDetails, IdentityRole>(options =>
    .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient(); // HttpClient servisini ekliyoruz
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

@@ -1,4 +1,4 @@
-using System.Diagnostics;
+ï»¿using System.Diagnostics;
 using AI_Kesim.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -37,10 +37,10 @@ namespace AI_Kesim.Controllers
                     imageBytes = memoryStream.ToArray();
                 }
 
-                // Foto?raf? Clarifai API'ye göndererek analiz et
+                // Foto?raf? Clarifai API'ye gÃ¶ndererek analiz et
                 //var analysisResult = await _clarifaiService.UploadImageAndAnalyze(imageBytes);
 
-                // API'den gelen sonucu kullan?c?ya göster
+                // API'den gelen sonucu kullan?c?ya gÃ¶ster
                 //ViewBag.AnalysisResult = analysisResult;
             }
             else

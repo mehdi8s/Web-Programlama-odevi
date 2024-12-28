@@ -1,142 +1,264 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Kuaför Muhammer Usta";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Hoş Geldiniz</h1>
-    <p>
-        <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core ile Web Uygulamaları Geliştirme</a> hakkında daha fazla bilgi alın.
-    </p>
-</div>
-
-<h2>Görsel Yükleyin ve Analiz Edin</h2>
-<form asp-controller="Vision" asp-action="AnalyzeImage" method="post" enctype="multipart/form-data">
-    <div>
-        <label for="file">Görsel Yükle:</label>
-        <input type="file" id="file" name="file" />
-    </div>
-    <div>
-        <button type="submit" class="btn btn-primary mt-2">Analiz Et</button>
-    </div>
-</form>
-
-<!-- Adres Kartı -->
-<div class="card mt-5">
-    <div class="card-title">Adres</div>
-    <p>
-        Kuaför Yunus Tok Adres: Kemalpaşa Mahallesi Üniversite Caddesi No 90/A Kapı No 105 Serdivan Sakarya
-    </p>
-    <a href="https://www.google.com/maps" target="_blank" class="map-button">Haritada Gör</a>
-</div>
-
-<!-- Çalışma Saatleri Kartı -->
-<div class="card mt-4">
-    <div class="card-title">Çalışma Saatleri</div>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Gün</th>
-                <th>Saat</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Pazartesi</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Salı</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Çarşamba</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Perşembe</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Cuma</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Cumartesi</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Pazar</td>
-                <td>12:00 - 18:00</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<!-- Müşteri Yorumları Kartı -->
-<div class="card mt-4">
-    <div class="card-title">Müşteri Yorumları</div>
-    <div class="d-flex align-items-center">
-        <span class="ms-2">3 Yorum, 2 Puanlama</span>
-    </div>
-    <div class="mt-2">
-        <div class="text-warning">★★★★★</div>
-        <p><strong>melih:</strong> Kalite asla tesadüf değildir :)</p>
-    </div>
-    <div class="mt-2">
-        <div class="text-warning">★★★★★</div>
-        <p><strong>mehdi:</strong> Çocukluktan bu güne bu berbere giderim muhteşem</p>
-    </div>
-    <div class="mt-2">
-        <div class="text-warning">★★★★★</div>
-        <p><strong>emir:</strong> AI özelliği ile tarzımı yakaladım</p>
-    </div>
-    <div class="text-warning">★★★★★</div>
-    <p><strong>muhammet:</strong></p>
-    <div class="text-warning">★★★★★</div>
-    <p><strong>kemal:</strong></p>
-</div>
-
-<!-- CSS -->
 <style>
-    .card {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Daha küçük gölge */
-        border-radius: 5px; /* Daha küçük köşe yuvarlama */
-        padding: 10px; /* İç boşluk azaltıldı */
-        margin-bottom: 20px; /* Kartlar arası boşluk */
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --text-color: #1f2937;
+        --bg-light: #f3f4f6;
+        --border-color: #e5e7eb;
     }
 
-    .card-title {
-        font-size: 1.2rem; /* Daha küçük başlık boyutu */
-        font-weight: 600; /* Orta kalınlık */
-        margin-bottom: 0.5rem; /* Daha az boşluk */
-    }
-
-    .table-bordered th, .table-bordered td {
-        vertical-align: middle;
-        text-align: center;
-        font-size: 0.9rem; /* Daha küçük yazı boyutu */
-        padding: 0.5rem; /* Hücre iç boşluğu küçültüldü */
-    }
-
-    .text-warning {
-        font-size: 1rem; /* Daha küçük yazı boyutu */
-        color: #ff9800; /* Daha hafif turuncu */
-    }
-
-    .map-button {
-        display: inline-block;
-        margin-top: 10px; /* Üstten boşluk */
-        padding: 5px 10px;
-        font-size: 0.9rem; /* Daha küçük yazı boyutu */
+    .hero-section {
+        background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        padding: 3rem 0;
+        margin-bottom: 2rem;
         color: white;
-        background-color: #007bff;
-        border-radius: 3px;
-        text-decoration: none;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.2s ease-in-out;
+        border-radius: 1rem;
     }
 
-        .map-button:hover {
-            background-color: #0056b3; /* Daha koyu mavi */
+    .upload-area {
+        border: 2px dashed var(--border-color);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: var(--bg-light);
+        position: relative;
+    }
+
+        .upload-area:hover {
+            border-color: var(--primary-color);
+            background-color: white;
         }
+
+    .custom-card {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid var(--border-color);
+        overflow: hidden;
+    }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+    .card-header {
+        background: var(--bg-light);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 1.5rem;
+    }
+
+    .table-modern {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+        .table-modern th {
+            background-color: var(--bg-light);
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .table-modern td {
+            padding: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+    .review-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.5rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-item:hover {
+            background-color: var(--bg-light);
+        }
+
+    .star-rating {
+        color: #fbbf24;
+        font-size: 1.25rem;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+    #imagePreview {
+        max-width: 100%;
+        max-height: 300px;
+        display: none;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+    }
 </style>
+
+<!-- Hero Section -->
+<div class="hero-section text-center">
+    <h1 class="display-4 mb-3">Berber Muhammer Usta</h1>
+    <p class="lead">Profesyonel Saç Tasarımı ve Bakımı</p>
+</div>
+
+<div class="container">
+    <!-- AI Analiz Bölümü -->
+    <div class="custom-card mb-5">
+        <div class="card-header">
+            <h2 class="h4 mb-0">
+                <i class="fas fa-robot me-2"></i>AI ile Saç Analizi
+            </h2>
+        </div>
+        <div class="card-body p-4">
+            <form asp-controller="Vision" asp-action="AnalyzeImage" method="post" enctype="multipart/form-data">
+                <div class="upload-area mb-4" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt fa-3x mb-3 text-primary"></i>
+                    <h5>Fotoğraf Yükleyin</h5>
+                    <p class="text-muted">veya buraya sürükleyip bırakın</p>
+                    <input type="file" id="file" name="file" class="d-none" accept="image/*" />
+                    <img id="imagePreview" class="mx-auto" />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-magic me-2"></i>Analiz Et
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <!-- Adres Kartı -->
+        <div class="col-md-6">
+            <div class="custom-card h-100">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        <i class="fas fa-map-marker-alt me-2 text-danger"></i>Adres
+                    </h3>
+                </div>
+                <div class="card-body p-4">
+                    <p>Kemalpaşa Mahallesi Üniversite Caddesi No 90/A Kapı No 105 Serdivan Sakarya</p>
+                    <a href="https://www.google.com/maps" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-directions me-2"></i>Yol Tarifi Al
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Çalışma Saatleri -->
+        <div class="col-md-6">
+            <div class="custom-card h-100">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        <i class="fas fa-clock me-2 text-primary"></i>Çalışma Saatleri
+                    </h3>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table-modern">
+                        <thead>
+                            <tr>
+                                <th>Gün</th>
+                                <th>Saat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var day in new[] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" })
+                            {
+                                <tr>
+                                    <td>@day</td>
+                                    <td>12:00 - 18:00</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Müşteri Yorumları -->
+    <div class="custom-card">
+        <div class="card-header">
+            <h3 class="h5 mb-0">
+                <i class="fas fa-comments me-2 text-warning"></i>Müşteri Yorumları
+            </h3>
+        </div>
+        <div class="review-container">
+            @foreach (var (name, comment) in new[] {
+            ("melih", "Kalite asla tesadüf değildir :)"),
+            ("mehdi", "Çocukluktan bu güne bu berbere giderim muhteşem"),
+            ("emir", "AI özelliği ile tarzımı yakaladım")
+            })
+            {
+                <div class="review-item">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="star-rating me-2">★★★★★</div>
+                        <strong>@name</strong>
+                    </div>
+                    <p class="mb-0 text-muted">@comment</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('file');
+            const imagePreview = document.getElementById('imagePreview');
+
+            uploadArea.addEventListener('click', () => fileInput.click());
+
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.style.borderColor = 'var(--primary-color)';
+            });
+
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.style.borderColor = 'var(--border-color)';
+            });
+
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.style.borderColor = 'var(--border-color)';
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    showPreview(e.dataTransfer.files[0]);
+                }
+            });
+
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length) {
+                    showPreview(e.target.files[0]);
+                }
+            });
+
+            function showPreview(file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+}

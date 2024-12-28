@@ -3,18 +3,140 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Hoş Geldiniz</h1>
+    <p>
+        <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core ile Web Uygulamaları Geliştirme</a> hakkında daha fazla bilgi alın.
+    </p>
 </div>
 
 <h2>Görsel Yükleyin ve Analiz Edin</h2>
-
 <form asp-controller="Vision" asp-action="AnalyzeImage" method="post" enctype="multipart/form-data">
     <div>
         <label for="file">Görsel Yükle:</label>
         <input type="file" id="file" name="file" />
     </div>
     <div>
-        <button type="submit">Analiz Et</button>
+        <button type="submit" class="btn btn-primary mt-2">Analiz Et</button>
     </div>
 </form>
+
+<!-- Adres Kartı -->
+<div class="card mt-5">
+    <div class="card-title">Adres</div>
+    <p>
+        Kuaför Yunus Tok Adres: Kemalpaşa Mahallesi Üniversite Caddesi No 90/A Kapı No 105 Serdivan Sakarya
+    </p>
+    <a href="https://www.google.com/maps" target="_blank" class="map-button">Haritada Gör</a>
+</div>
+
+<!-- Çalışma Saatleri Kartı -->
+<div class="card mt-4">
+    <div class="card-title">Çalışma Saatleri</div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Gün</th>
+                <th>Saat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pazartesi</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Salı</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Çarşamba</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Perşembe</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Cuma</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Cumartesi</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Pazar</td>
+                <td>12:00 - 18:00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Müşteri Yorumları Kartı -->
+<div class="card mt-4">
+    <div class="card-title">Müşteri Yorumları</div>
+    <div class="d-flex align-items-center">
+        <span class="ms-2">3 Yorum, 2 Puanlama</span>
+    </div>
+    <div class="mt-2">
+        <div class="text-warning">★★★★★</div>
+        <p><strong>melih:</strong> Kalite asla tesadüf değildir :)</p>
+    </div>
+    <div class="mt-2">
+        <div class="text-warning">★★★★★</div>
+        <p><strong>mehdi:</strong> Çocukluktan bu güne bu berbere giderim muhteşem</p>
+    </div>
+    <div class="mt-2">
+        <div class="text-warning">★★★★★</div>
+        <p><strong>emir:</strong> AI özelliği ile tarzımı yakaladım</p>
+    </div>
+    <div class="text-warning">★★★★★</div>
+    <p><strong>muhammet:</strong></p>
+    <div class="text-warning">★★★★★</div>
+    <p><strong>kemal:</strong></p>
+</div>
+
+<!-- CSS -->
+<style>
+    .card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Daha küçük gölge */
+        border-radius: 5px; /* Daha küçük köşe yuvarlama */
+        padding: 10px; /* İç boşluk azaltıldı */
+        margin-bottom: 20px; /* Kartlar arası boşluk */
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Daha küçük başlık boyutu */
+        font-weight: 600; /* Orta kalınlık */
+        margin-bottom: 0.5rem; /* Daha az boşluk */
+    }
+
+    .table-bordered th, .table-bordered td {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 0.9rem; /* Daha küçük yazı boyutu */
+        padding: 0.5rem; /* Hücre iç boşluğu küçültüldü */
+    }
+
+    .text-warning {
+        font-size: 1rem; /* Daha küçük yazı boyutu */
+        color: #ff9800; /* Daha hafif turuncu */
+    }
+
+    .map-button {
+        display: inline-block;
+        margin-top: 10px; /* Üstten boşluk */
+        padding: 5px 10px;
+        font-size: 0.9rem; /* Daha küçük yazı boyutu */
+        color: white;
+        background-color: #007bff;
+        border-radius: 3px;
+        text-decoration: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        .map-button:hover {
+            background-color: #0056b3; /* Daha koyu mavi */
+        }
+</style>

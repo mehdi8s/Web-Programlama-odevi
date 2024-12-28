@@ -12,7 +12,6 @@ namespace AI_Kesim.Data
         }
 
         public DbSet<Calisan> Calisan { get; set; }
-        public DbSet<CalismaSaati> CalismaSaatleri { get; set; }
         public DbSet<Uzmanlik> Uzmanliklar { get; set; }
         public DbSet<CalisanUzmanlik> CalisanUzmanliklari { get; set; }
         public DbSet<Randevu> Randevular { get; set; } // Randevu tablosu

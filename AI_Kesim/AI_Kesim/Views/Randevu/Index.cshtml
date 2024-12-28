@@ -3,6 +3,7 @@
 <div class="container mt-4">
     <h2>Randevularım</h2>
     <a asp-action="Create" class="btn btn-primary mb-3">Yeni Randevu</a>
+
     @if (Model != null && Model.Any())
     {
         <table class="table table-bordered">
@@ -12,7 +13,6 @@
                     <th>Çalışan</th>
                     <th>Tarih</th>
                     <th>Saat</th>
-                    <th>Çalışma Saatleri</th>
                     <th>İşlemler</th>
                 </tr>
             </thead>
@@ -24,21 +24,6 @@
                         <td>@($"{randevu.Calisan?.Isim} {randevu.Calisan?.Soyisim}" ?? "Belirtilmemiş")</td>
                         <td>@randevu.RandevuTarihi.ToShortDateString()</td>
                         <td>@randevu.RandevuTarihi.ToString("HH:mm")</td>
-                        <td>
-                            @if (randevu.Calisan?.CalismaSaatleri != null && randevu.Calisan.CalismaSaatleri.Any())
-                            {
-                                <ul>
-                                    @foreach (var saat in randevu.Calisan.CalismaSaatleri)
-                                    {
-                                        <li>@saat.Tarih.ToString("HH:mm") - @saat.Tarih.("HH:mm")</li>
-                                    }
-                                </ul>
-                            }
-                            else
-                            {
-                                <span>Belirtilmemiş</span>
-                            }
-                        </td>
                         <td>
                             <form asp-action="Delete" asp-route-id="@randevu.Id" onsubmit="return confirm('Randevuyu silmek istediğinize emin misiniz?');">
                                 <button type="submit" class="btn btn-danger btn-sm">Sil</button>

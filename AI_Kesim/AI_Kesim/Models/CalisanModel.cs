@@ -10,21 +10,8 @@ namespace AI_Kesim.Models
         public string Soyisim { get; set; }
         public int Maas { get; set; }
 
-        // Çalışma saatleriyle ilişki
-        public ICollection<CalismaSaati> CalismaSaatleri { get; set; } = new List<CalismaSaati>();
-
         // Uzmanlık alanlarıyla ilişki
         public ICollection<CalisanUzmanlik> CalisanUzmanliklari { get; set; } = new List<CalisanUzmanlik>();
-    }
-
-    public class CalismaSaati
-    {
-        public int Id { get; set; }
-        public int CalisanId { get; set; }
-        public Calisan Calisan { get; set; }
-
-        [Required]
-        public DateTime Tarih { get; set; } // Çalışma tarihi (örnek: 22.12.2024)
     }
 
     public class Uzmanlik

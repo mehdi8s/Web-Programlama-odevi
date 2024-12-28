@@ -10,13 +10,13 @@ namespace AI_Kesim.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ClarifaiService _clarifaiService;  // ClarifaiService'i DI ile ekliyoruz
+        //private readonly ClarifaiService _clarifaiService;  // ClarifaiService'i DI ile ekliyoruz
 
-        public HomeController(ILogger<HomeController> logger, ClarifaiService clarifaiService)
-        {
-            _logger = logger;
-            _clarifaiService = clarifaiService;
-        }
+        //public HomeController(ILogger<HomeController> logger, ClarifaiService clarifaiService)
+        //{
+        //    _logger = logger;
+        //    _clarifaiService = clarifaiService;
+        //}
 
         // Ana sayfa
         public IActionResult Index()
@@ -24,7 +24,7 @@ namespace AI_Kesim.Controllers
             return View();
         }
 
-        // Foto?raf analiz etme
+        // Foto?rraf analiz etme
         [HttpPost]
         public async Task<IActionResult> Analyze(IFormFile file)
         {
@@ -38,10 +38,10 @@ namespace AI_Kesim.Controllers
                 }
 
                 // Foto?raf? Clarifai API'ye göndererek analiz et
-                var analysisResult = await _clarifaiService.UploadImageAndAnalyze(imageBytes);
+                //var analysisResult = await _clarifaiService.UploadImageAndAnalyze(imageBytes);
 
                 // API'den gelen sonucu kullan?c?ya göster
-                ViewBag.AnalysisResult = analysisResult;
+                //ViewBag.AnalysisResult = analysisResult;
             }
             else
             {
